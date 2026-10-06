@@ -1,0 +1,250 @@
+/* =========================================
+   NUBEX — CREATE PROJECT
+========================================= */
+
+.project-page {
+  min-height: 100vh;
+  padding: 120px 6vw 90px;
+  background: #050505;
+  color: #f5f5f5;
+}
+
+.project-container {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.page-header {
+  margin-bottom: 50px;
+}
+
+.page-header .section-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  color: #666;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  max-width: 760px;
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(50px, 7vw, 76px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -4px;
+}
+
+.page-header p {
+  max-width: 600px;
+  margin: 25px 0 0;
+
+  color: #777;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* FORM */
+
+.project-form {
+  padding: 38px;
+
+  border: 1px solid #252525;
+  background: #090909;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-bottom: 26px;
+}
+
+.form-group label {
+  color: #999;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 16px 17px;
+
+  border: 1px solid #292929;
+  outline: none;
+
+  border-radius: 0;
+
+  background: #050505;
+  color: #f5f5f5;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #444;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #3a3a3a;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #777;
+  background: #080808;
+}
+
+.form-group textarea {
+  min-height: 145px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+/* SELECT */
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #090909;
+  color: #ffffff;
+}
+
+/* TWO COLUMN */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ACTIONS */
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 42px;
+  padding-top: 25px;
+
+  border-top: 1px solid #222;
+}
+
+.back-button,
+.continue-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 14px 21px;
+
+  font-size: 12px;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* BACK */
+
+.back-button {
+  border: 1px solid #292929;
+
+  background: transparent;
+  color: #888;
+}
+
+.back-button:hover {
+  border-color: #555;
+  color: #ffffff;
+  transform: translateX(-2px);
+}
+
+/* CONTINUE */
+
+.continue-button {
+  border: 1px solid #f5f5f5;
+
+  background: #f5f5f5;
+  color: #050505;
+
+  font-weight: 600;
+}
+
+.continue-button:hover {
+  background: #dddddd;
+  border-color: #dddddd;
+
+  transform: translateX(2px);
+}
+
+.continue-button span {
+  font-size: 17px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .project-page {
+    padding: 90px 20px 65px;
+  }
+
+  .page-header h1 {
+    font-size: 50px;
+    letter-spacing: -3px;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+
+  .project-form {
+    padding: 25px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-actions {
+    gap: 12px;
+  }
+
+  .back-button,
+  .continue-button {
+    flex: 1;
+  }
+}

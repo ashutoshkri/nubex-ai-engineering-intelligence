@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #050505;
+  color: #ffffff;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.nubex-home {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(70, 80, 255, 0.14),
+      transparent 32%
+    ),
+    #050505;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 88px;
+  padding: 0 6vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.nav-links a {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: white;
+
+  padding: 12px 20px;
+  border-radius: 100px;
+
+  font-size: 13px;
+
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: white;
+  color: black;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: calc(100vh - 88px);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  padding: 80px 6vw;
+  gap: 50px;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  margin-bottom: 28px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.hero h1 {
+  font-size: clamp(58px, 7vw, 105px);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+  font-weight: 600;
+}
+
+.hero h1 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-description {
+  max-width: 500px;
+  margin-top: 38px;
+
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 38px;
+}
+
+.primary-button {
+  border: none;
+  background: #ffffff;
+  color: #050505;
+
+  padding: 15px 23px;
+  border-radius: 100px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  transition: transform 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+}
+
+.primary-button span {
+  font-size: 18px;
+}
+
+.secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+
+  padding: 14px 21px;
+  border-radius: 100px;
+
+  font-size: 14px;
+}
+
+/* =========================
+   AI VISUAL
+========================= */
+
+.hero-visual {
+  min-height: 560px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.orb-one {
+  width: 360px;
+  height: 360px;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(255, 255, 255, 0.2),
+      rgba(70, 80, 255, 0.06) 45%,
+      transparent 70%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.orb-two {
+  width: 240px;
+  height: 240px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(15px);
+}
+
+/* =========================
+   AI CARD
+========================= */
+
+.ai-card {
+  position: relative;
+  z-index: 5;
+
+  width: min(440px, 80%);
+  padding: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+
+  background: rgba(15, 15, 18, 0.72);
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 9px;
+  letter-spacing: 0.14em;
+
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.status {
+  color: rgba(150, 255, 200, 0.75);
+}
+
+.drawing-box {
+  height: 250px;
+  margin: 22px 0;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 35px 35px;
+}
+
+.drawing-line {
+  position: absolute;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+
+  transform-origin: left;
+}
+
+.line-one {
+  width: 240px;
+  left: 60px;
+  top: 70px;
+  transform: rotate(25deg);
+}
+
+.line-two {
+  width: 210px;
+  left: 130px;
+  top: 150px;
+  transform: rotate(-18deg);
+}
+
+.line-three {
+  width: 180px;
+  left: 100px;
+  top: 110px;
+  transform: rotate(80deg);
+}
+
+.drawing-node {
+  width: 9px;
+  height: 9px;
+
+  position: absolute;
+
+  border-radius: 50%;
+  background: white;
+
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.node-one {
+  left: 58px;
+  top: 66px;
+}
+
+.node-two {
+  left: 330px;
+  top: 140px;
+}
+
+.node-three {
+  left: 150px;
+  top: 190px;
+}
+
+.analysis-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.analysis-row div {
+  padding: 13px;
+
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.analysis-row small {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.analysis-row strong {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* =========================
+   FLOATING LABELS
+========================= */
+
+.floating-label {
+  position: absolute;
+  z-index: 8;
+
+  padding: 10px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(10px);
+
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.floating-label span {
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.label-one {
+  top: 110px;
+  left: 2%;
+}
+
+.label-two {
+  right: 2%;
+  top: 220px;
+}
+
+.label-three {
+  bottom: 110px;
+  left: 10%;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.hero-bottom {
+  padding: 0 6vw 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.scroll-indicator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 60px;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: auto;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 500px;
+  }
+
+  .hero-bottom {
+    display: none;
+  }
+}
+
+.workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workflow-card {
+    min-height: 330px;
+  }
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5vw;
+  }
+
+  .nav-button {
+    padding: 10px 15px;
+  }
+
+  .hero {
+    padding: 50px 5vw;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 420px;
+  }
+
+  .ai-card {
+    width: 92%;
+  }
+
+  .floating-label {
+    display: none;
+  }
+
+  .orb-one {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.workflow-section {
+    padding: 100px 5vw;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-card {
+    min-height: 300px;
+  }
+
+  .workflow-icon {
+    margin-top: 70px;
+  }
+
+/* =========================
+   WORKFLOW SECTION
+========================= */
+
+.workflow-section {
+  padding: 160px 6vw;
+  background: #050505;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.workflow-heading {
+  max-width: 760px;
+}
+
+.section-eyebrow {
+  margin-bottom: 25px;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.workflow-heading h2 {
+  font-size: clamp(50px, 6vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+}
+
+.workflow-heading h2 span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.workflow-heading > p:last-child {
+  max-width: 520px;
+  margin-top: 30px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Workflow cards */
+
+.workflow-grid {
+  margin-top: 100px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.workflow-card {
+  min-height: 360px;
+
+  padding: 30px;
+
+  position: relative;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.workflow-card:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.workflow-number {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.workflow-icon {
+  margin-top: 100px;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  font-size: 18px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.workflow-card:hover .workflow-icon {
+  background: #ffffff;
+  color: #050505;
+  transform: rotate(10deg);
+}
+
+.workflow-card h3 {
+  margin-top: 28px;
+
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.workflow-card p {
+  max-width: 240px;
+
+  margin-top: 15px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 13px;
+  line-height: 1.7;
+}

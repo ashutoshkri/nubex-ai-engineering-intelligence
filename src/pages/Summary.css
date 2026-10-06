@@ -1,0 +1,725 @@
+/* =========================================================
+   NUBEX — SUMMARY PAGE
+   ========================================================= */
+
+.summary-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #050505;
+  color: #f5f5f5;
+  padding: 110px 24px 70px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.summary-page *,
+.summary-page *::before,
+.summary-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.summary-hero {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 70px;
+}
+
+.summary-eyebrow {
+  margin-bottom: 24px;
+  color: #777;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.summary-hero h1 {
+  margin: 0;
+  max-width: 720px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 7vw, 82px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -2px;
+}
+
+.summary-hero h1 span {
+  display: inline;
+  color: #555;
+}
+
+.summary-hero p {
+  max-width: 620px;
+  margin: 30px 0 0;
+  color: #999;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.summary-progress {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 75px;
+
+  display: flex;
+  align-items: center;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+}
+
+.summary-progress::-webkit-scrollbar {
+  display: none;
+}
+
+.summary-step {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  color: #555;
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.summary-step.active {
+  color: #ffffff;
+}
+
+.summary-step-number {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #383838;
+  border-radius: 50%;
+
+  color: #666;
+  font-size: 7px;
+}
+
+.summary-step.active .summary-step-number {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.summary-step-line {
+  width: 34px;
+  height: 1px;
+
+  margin: 0 9px;
+
+  background: #292929;
+}
+
+
+/* =========================================================
+   COMMON LABEL
+   ========================================================= */
+
+.summary-label {
+  margin-bottom: 12px;
+
+  color: #666;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROJECT SUMMARY
+   ========================================================= */
+
+.summary-section {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 90px;
+
+  border: 1px solid #292929;
+  background: #050505;
+}
+
+.summary-section-header {
+  min-height: 105px;
+  padding: 27px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  border-bottom: 1px solid #292929;
+}
+
+.summary-section-header h2 {
+  margin: 0;
+
+  color: #f4f4f4;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.summary-status {
+  flex-shrink: 0;
+
+  color: #00b979;
+  font-size: 7px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.summary-status span {
+  display: inline-block;
+
+  width: 5px;
+  height: 5px;
+
+  margin-right: 6px;
+
+  border-radius: 50%;
+  background: #00b979;
+}
+
+
+/* =========================================================
+   PROJECT STATS
+   ========================================================= */
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.summary-stat {
+  min-height: 190px;
+  padding: 27px 20px;
+
+  border-right: 1px solid #292929;
+}
+
+.summary-stat:last-child {
+  border-right: none;
+}
+
+.summary-stat-value {
+  margin-bottom: 9px;
+
+  color: #f5f5f5;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.summary-stat-label {
+  margin-bottom: 13px;
+
+  color: #b7b7b7;
+
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.summary-stat p {
+  margin: 0;
+
+  color: #666;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINDINGS
+   ========================================================= */
+
+.summary-findings {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 90px;
+}
+
+.summary-findings > h2 {
+  margin: 0 0 30px;
+
+  color: #f5f5f5;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.summary-findings-list {
+  width: 100%;
+
+  border-top: 1px solid #292929;
+}
+
+.summary-finding {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+
+  padding: 29px 0;
+
+  border-bottom: 1px solid #292929;
+}
+
+.summary-finding-number {
+  padding-top: 2px;
+
+  color: #555;
+
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.summary-finding-content {
+  position: relative;
+}
+
+.summary-finding-content h3 {
+  margin: 0 0 11px;
+
+  color: #eeeeee;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.summary-finding-content p {
+  max-width: 600px;
+
+  margin: 0 0 17px;
+
+  color: #777;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.summary-finding-content span {
+  display: inline-block;
+
+  padding: 5px 8px;
+
+  border: 1px solid #303030;
+
+  color: #666;
+
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   COST
+   ========================================================= */
+
+.summary-cost {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 75px;
+
+  padding: 31px 0;
+
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
+}
+
+.summary-cost-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.summary-cost-content h2 {
+  margin: 0 0 12px;
+
+  color: #f2f2f2;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.summary-cost-content p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #777;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.summary-cost-value {
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NEXT STEP
+   ========================================================= */
+
+.summary-next {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+
+  padding-bottom: 35px;
+}
+
+.summary-next h2 {
+  margin: 0 0 14px;
+
+  color: #f5f5f5;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.summary-next p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #777;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.summary-actions {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  padding-top: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top: 1px solid #292929;
+}
+
+.summary-back-button,
+.summary-primary-button {
+  min-height: 38px;
+
+  padding: 0 17px;
+
+  border: 1px solid #303030;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 9px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.summary-back-button {
+  background: transparent;
+  color: #999;
+}
+
+.summary-back-button:hover {
+  border-color: #666;
+  color: #ffffff;
+}
+
+.summary-primary-button {
+  border-color: #ffffff;
+
+  background: #ffffff;
+  color: #000000;
+}
+
+.summary-primary-button:hover {
+  background: #dddddd;
+  border-color: #dddddd;
+}
+
+.summary-primary-button span {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .summary-page {
+    padding: 85px 22px 55px;
+  }
+
+  .summary-hero {
+    margin-bottom: 55px;
+  }
+
+  .summary-progress {
+    margin-bottom: 60px;
+  }
+
+  .summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-stat {
+    border-bottom: 1px solid #292929;
+  }
+
+  .summary-stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .summary-stat:nth-child(3),
+  .summary-stat:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+  .summary-page {
+    padding: 65px 17px 45px;
+  }
+
+  .summary-hero {
+    margin-bottom: 45px;
+  }
+
+  .summary-eyebrow {
+    margin-bottom: 19px;
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .summary-hero h1 {
+    font-size: 50px;
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+  }
+
+  .summary-hero p {
+    margin-top: 24px;
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+
+  /* Progress */
+  .summary-progress {
+    margin-bottom: 55px;
+    padding-bottom: 5px;
+  }
+
+  .summary-step-line {
+    width: 20px;
+    margin: 0 6px;
+  }
+
+
+  /* Project section */
+  .summary-section {
+    margin-bottom: 65px;
+  }
+
+  .summary-section-header {
+    min-height: auto;
+
+    padding: 22px 18px;
+
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary-section-header h2 {
+    font-size: 20px;
+  }
+
+  .summary-status {
+    font-size: 7px;
+  }
+
+
+  /* Stats */
+  .summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-stat {
+    min-height: 155px;
+    padding: 22px 15px;
+  }
+
+  .summary-stat-value {
+    font-size: 30px;
+  }
+
+  .summary-stat-label {
+    font-size: 8px;
+  }
+
+  .summary-stat p {
+    font-size: 8px;
+  }
+
+
+  /* Findings */
+  .summary-findings {
+    margin-bottom: 65px;
+  }
+
+  .summary-findings > h2 {
+    margin-bottom: 25px;
+    font-size: 27px;
+  }
+
+  .summary-finding {
+    grid-template-columns: 40px 1fr;
+    padding: 24px 0;
+  }
+
+  .summary-finding-content h3 {
+    font-size: 17px;
+  }
+
+  .summary-finding-content p {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+
+  /* Cost */
+  .summary-cost {
+    margin-bottom: 60px;
+    padding: 27px 0;
+  }
+
+  .summary-cost-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .summary-cost-content h2 {
+    font-size: 22px;
+  }
+
+  .summary-cost-value {
+    font-size: 36px;
+  }
+
+
+  /* Next */
+  .summary-next {
+    padding-bottom: 30px;
+  }
+
+  .summary-next h2 {
+    font-size: 28px;
+  }
+
+
+  /* Buttons */
+  .summary-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .summary-back-button,
+  .summary-primary-button {
+    width: 100%;
+    min-height: 44px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .summary-hero h1 {
+    font-size: 43px;
+  }
+
+  .summary-stat {
+    padding: 19px 12px;
+  }
+
+  .summary-stat-value {
+    font-size: 27px;
+  }
+
+  .summary-cost-value {
+    font-size: 32px;
+  }
+}
